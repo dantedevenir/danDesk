@@ -34,7 +34,7 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "open app launcher", group = "app" }),
 
 	--- Code editor
-	awful.key({ mod, shift }, "e", function()
+	awful.key({ mod, shift }, "c", function()
 		awful.spawn(apps.default.code_editor)
 	end, { description = "open code editor", group = "app" }),
 
@@ -44,7 +44,7 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "open file manager", group = "app" }),
 
 	--- Web browser
-	awful.key({ mod, shift }, "w", function()
+	awful.key({ mod, shift }, "e", function()
 		awful.spawn(apps.default.web_browser)
 	end, { description = "open web browser", group = "app" }),
 

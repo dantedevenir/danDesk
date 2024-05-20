@@ -6,7 +6,7 @@ return {
 	--- Default Applications
 	default = {
 		--- Default terminal emulator
-		terminal = "wezterm start --always-new-process",
+		terminal = "kitty",
 		--- Default music client
 		music_player = "wezterm start --class music ncmpcpp",
 		--- Default text editor
@@ -14,7 +14,7 @@ return {
 		--- Default code editor
 		code_editor = "code",
 		--- Default web browser
-		web_browser = "firefox",
+		web_browser = "microsoft-edge-stable",
 		--- Default file manager
 		file_manager = "nautilus",
 		--- Default network manager
