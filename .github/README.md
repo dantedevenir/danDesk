@@ -61,7 +61,7 @@ Here are some details about my setup:
 
 - **OS:** [Arch Linux](https://archlinux.org)
 - **WM:** [awesome](https://github.com/awesomeWM/awesome)
-- **Terminal:** [kitty](https://github.com/wez/wezterm](https://github.com/kovidgoyal/kitty)
+- **Terminal:** [kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [zsh](https://www.zsh.org/)
 - **Editor:** [neovim](https://github.com/neovim/neovim) / [vscode](https://github.com/microsoft/vscode)
 - **Compositor:** [picom](https://github.com/yshui/picom)
@@ -131,7 +131,7 @@ paru -S awesome-git
 > Install necessary dependencies
 
 ```sh
-paru -Sy picom-git wezterm rofi acpi acpid acpi_call upower lxappearance-gtk3 \
+paru -Sy picom-git kitty rofi acpi acpid acpi_call upower lxappearance-gtk3 \
 jq inotify-tools polkit-gnome xdotool xclip gpick ffmpeg blueman redshift \
 pipewire pipewire-alsa pipewire-pulse alsa-utils brightnessctl feh maim \
 mpv mpd mpc mpdris2 python-mutagen ncmpcpp playerctl --needed
