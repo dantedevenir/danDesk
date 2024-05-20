@@ -62,6 +62,21 @@ awful.keyboard.append_global_keybindings({
 	--- Client
 	--- ~~~~~~
 	--- Focus client by direction
+
+	awful.key({ mod, shift }, "o", function(c)
+        if client.focus then
+            client.focus:move_to_screen()
+        end
+    end, {description = "move client to next screen", group = "client"}),
+
+    -- Mover cliente a la pantalla anterior
+    awful.key({ mod, shift }, "p", function(c)
+        if client.focus then
+            local screen = client.focus.screen.index
+            client.focus:move_to_screen(screen - 1)
+        end
+    end, {description = "move client to previous screen", group = "client"}),
+
 	awful.key({ mod }, "k", function()
 		awful.client.focus.bydirection("up")
 		bling.module.flash_focus.flashfocus(client.focus)
