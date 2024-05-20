@@ -59,8 +59,8 @@ function decorations.enable_rounding()
 end
 
 function decorations.init()
-	require("ui.decorations.titlebar")
-	require("ui.decorations.music")
+	-- require("ui.decorations.titlebar")
+	-- require("ui.decorations.music")
 end
 
 return decorations
