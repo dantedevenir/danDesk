@@ -132,3 +132,9 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit ~/.config/awesome/configuration/zsh/.p10k.zsh.
 [[ ! -f /home/dandev/.config/awesome/configuration/zsh/.p10k.zsh ]] || source /home/dandev/.config/awesome/configuration/zsh/.p10k.zsh
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
