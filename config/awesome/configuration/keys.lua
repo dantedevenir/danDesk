@@ -21,6 +21,23 @@ shift = "Shift"
 --- ~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
 
+	--- Relative move client
+	awful.key({ ctrl, mod, alt }, "Right", function(c)
+		c:relative_move(0, dpi(20), 0, 0)
+	end),
+
+	awful.key({ ctrl, mod, alt }, "Left", function(c)
+		c:relative_move(0, dpi(-20), 0, 0)
+	end),
+
+	awful.key({ ctrl, mod, alt }, "Up", function(c)
+		c:relative_move(dpi(-20), 0, 0, 0)
+	end),
+
+	awful.key({ ctrl, mod, alt }, "Down", function(c)
+		c:relative_move(dpi(20), 0, 0, 0)
+	end),
+
 	--- App
 	--- ~~~
 	-- Terminal
@@ -77,23 +94,6 @@ awful.keyboard.append_global_keybindings({
         end
     end, {description = "move client to previous screen", group = "client"}),
 
-	awful.key({ mod }, "k", function()
-		awful.client.focus.bydirection("up")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus up", group = "client" }),
-	awful.key({ mod }, "j", function()
-		awful.client.focus.bydirection("down")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus down", group = "client" }),
-	awful.key({ mod }, "h", function()
-		awful.client.focus.bydirection("left")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus left", group = "client" }),
-	awful.key({ mod }, "l", function()
-		awful.client.focus.bydirection("right")
-		bling.module.flash_focus.flashfocus(client.focus)
-	end, { description = "focus right", group = "client" }),
-
 	awful.key({ mod }, "Up", function()
 		awful.client.focus.bydirection("up")
 		bling.module.flash_focus.flashfocus(client.focus)
@@ -112,18 +112,6 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "focus right", group = "client" }),
 
 	--- Resize focused client
-	awful.key({ mod, ctrl }, "k", function(c)
-		helpers.client.resize_client(client.focus, "up")
-	end, { description = "resize to the up", group = "client" }),
-	awful.key({ mod, ctrl }, "j", function(c)
-		helpers.client.resize_client(client.focus, "down")
-	end, { description = "resize to the down", group = "client" }),
-	awful.key({ mod, ctrl }, "h", function(c)
-		helpers.client.resize_client(client.focus, "left")
-	end, { description = "resize to the left", group = "client" }),
-	awful.key({ mod, ctrl }, "l", function(c)
-		helpers.client.resize_client(client.focus, "right")
-	end, { description = "resize to the right", group = "client" }),
 
 	awful.key({ mod, ctrl }, "Up", function(c)
 		helpers.client.resize_client(client.focus, "up")
@@ -257,19 +245,19 @@ client.connect_signal("request::default_keybindings", function()
 		end),
 
 		--- Relative move client
-		awful.key({ mod, shift, ctrl }, "j", function(c)
+		awful.key({ ctrl, mod, alt }, "Right", function(c)
 			c:relative_move(0, dpi(20), 0, 0)
 		end),
 
-		awful.key({ mod, shift, ctrl }, "k", function(c)
+		awful.key({ ctrl, mod, alt }, "Left", function(c)
 			c:relative_move(0, dpi(-20), 0, 0)
 		end),
 
-		awful.key({ mod, shift, ctrl }, "h", function(c)
+		awful.key({ ctrl, mod, alt }, "Up", function(c)
 			c:relative_move(dpi(-20), 0, 0, 0)
 		end),
 
-		awful.key({ mod, shift, ctrl }, "l", function(c)
+		awful.key({ ctrl, mod, alt }, "Down", function(c)
 			c:relative_move(dpi(20), 0, 0, 0)
 		end),
 
