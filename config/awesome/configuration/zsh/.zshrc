@@ -131,4 +131,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit ~/.config/awesome/configuration/zsh/.p10k.zsh.
-[[ ! -f /home/dandev/.config/awesome/configuration/zsh/.p10k.zsh ]] || source ~/.config/awesome/configuration/zsh/.p10k.zsh
+[[ ! -f /home/dandev/.config/awesome/configuration/zsh/.p10k.zsh ]] || source /home/dandev/.config/awesome/configuration/zsh/.p10k.zsh
