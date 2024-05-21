@@ -6,7 +6,7 @@ return {
 	--- Default Applications
 	default = {
 		--- Default terminal emulator
-		terminal = "kitty --config .config/awesome/configuration/kitty/kitty.conf,
+		terminal = "kitty --config .config/awesome/configuration/kitty/kitty.conf",
 		--- Default music client
 		music_player = "wezterm start --class music ncmpcpp",
 		--- Default text editor
